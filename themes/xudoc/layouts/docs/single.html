@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <article class="documentation">
+    <h1>{{ .Title }}</h1>
+    {{ .Content | safeHTML }}
+    <div class="meta">
+      <div class="last-updated">
+        Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+      </div>
+    </div>
+  </article>
+{{ end }}

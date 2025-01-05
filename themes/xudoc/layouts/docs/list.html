@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <div class="docs-container">
+    <main class="docs-content">
+      <article class="documentation">
+        <h1>{{ .Title }}</h1>
+        {{ .Content | safeHTML }}
+        
+        <div class="docs-toc">
+          <h2>Table of Contents</h2>
+          <ul>
+            {{ range .Site.RegularPages }}
+              {{ if in .File.Dir "docs/" }}
+                <li>
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+        
+        <div class="meta">
+          <div class="last-updated">
+            Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+{{ end }}

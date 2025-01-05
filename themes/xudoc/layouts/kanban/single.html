@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="kanban-container">
+  <div class="kanban-column">
+    <h3>To Do</h3>
+    <div class="kanban-cards">
+      {{ range where .Pages "Params.status" "todo" }}
+        <div class="kanban-card">
+          <h4>{{ .Title }}</h4>
+          <p>{{ .Description }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  
+  <div class="kanban-column">
+    <h3>In Progress</h3>
+    <div class="kanban-cards">
+      {{ range where .Pages "Params.status" "in-progress" }}
+        <div class="kanban-card">
+          <h4>{{ .Title }}</h4>
+          <p>{{ .Description }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  
+  <div class="kanban-column">
+    <h3>Done</h3>
+    <div class="kanban-cards">
+      {{ range where .Pages "Params.status" "done" }}
+        <div class="kanban-card">
+          <h4>{{ .Title }}</h4>
+          <p>{{ .Description }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

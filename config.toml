@@ -1,0 +1,78 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "MULTIBINIT"
+theme = "XuDoc"
+
+[params]
+  author = "Xu"
+  description = "MULTIBNIT: a second-priniciples method code for atomatic construction of atomic potentials and large scale lattice dynamics"
+  docsLayout = "docs"
+  contact = [
+    { type = "email", value = "xu@example.com" },
+    { type = "phone", value = "+1 234 567 890" }
+  ]
+  social = [
+    { platform = "github", url = "https://github.com/example" }
+  ]
+  [params.toc]
+    depth = 3
+    show = true
+    sticky = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Documentation"
+    url = "/docs/"
+    weight = 2
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+  [[menu.docs]]
+    name = "Installation"
+    url = "/docs/installation/"
+    weight = 1
+  [[menu.docs]]
+    name = "Usage"
+    url = "/docs/usage/"
+    weight = 2
+  [[menu.docs]]
+    name = "Configuration"
+    url = "/docs/configuration/"
+    weight = 3
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[outputFormats]
+  [outputFormats.Docs]
+    baseName = "docs"
+    mediaType = "text/html"
+    isHTML = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+  docs = ["HTML", "Docs"]
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+    [markup.goldmark.renderer]
+      unsafe = true

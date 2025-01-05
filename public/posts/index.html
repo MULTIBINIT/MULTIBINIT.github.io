@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=55016&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts | XuDoc</title>
+  
+  <link rel="stylesheet" href="http://localhost:55016/css/shared.min.e1af131dfe9668f3731b7d733b6a38e43fac018cbc74b48e913becc0e24ac816.css" integrity="sha256-4a8THf6WaPNzG31zO2o45D&#43;sAYy8dLSOkTvswOJKyBY=">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      border-right: 1px solid #eee;
+    }
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar nav li {
+      margin: 10px 0;
+    }
+    main {
+      flex: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      margin-bottom: 2rem;
+    }
+    .post-list {
+      list-style: none;
+      padding: 0;
+    }
+    .post-item {
+      margin-bottom: 1rem;
+    }
+    .post-date {
+      color: #666;
+      font-size: 0.9em;
+    }
+    .documentation {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .documentation h1 {
+      margin-bottom: 1.5rem;
+    }
+    .documentation h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .documentation h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .documentation code {
+      background: #f8f9fa;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9em;
+    }
+    .documentation pre {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    .documentation pre code {
+      background: none;
+      padding: 0;
+    }
+    .documentation .meta {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      color: #666;
+      font-size: 0.9em;
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #333;
+    }
+    .card p {
+      margin: 0;
+      color: #666;
+      line-height: 1.5;
+    }
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="site">
+  <div class="site-content">
+    <header class="navbar">
+  <div class="site-title">
+    <h1><a href="http://localhost:55016/">XuDoc</a></h1>
+  </div>
+  <nav>
+    <ul>
+      
+        
+          <li><a href="/">Home</a></li>
+        
+      
+        
+      
+        
+          <li><a href="/docs/">Documentation</a></li>
+        
+      
+        
+          <li><a href="/posts/">Posts</a></li>
+        
+      
+        
+          <li><a href="/about/">About</a></li>
+        
+      
+        
+          <li><a href="/contact/">Contact</a></li>
+        
+      
+    </ul>
+    
+      <div class="header-social">
+        
+          
+            <a href="https://github.com/example" target="_blank" aria-label="GitHub">
+              <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          
+        
+      </div>
+    
+  </nav>
+</header>
+
+    <main>
+      
+  <section class="introduction">
+    
+  </section>
+  <div class="cards-container">
+    
+      <div class="card">
+        <a href="/posts/2025/01/yzpost/">
+          <h3>yzpost</h3>
+          <p><p>This is my second blog post. More content coming soon!</p></p>
+        </a>
+      </div>
+    
+      <div class="card">
+        <a href="/posts/2024/01/showcasing-latex-in-hugo/">
+          <h3>Showcasing LaTeX in Hugo</h3>
+          <p><h2 id="mathematical-expressions">Mathematical Expressions</h2>
+<p>Inline math: $E = mc^2$</p>
+<p>Display math:
+$$
+\int_{a}^{b} x^2 dx
+$$</p>
+<h2 id="chemical-equations">Chemical Equations</h2>
+<p>$$
+\ce{2H2 + O2 -&gt; 2H2O}
+$$</p>
+<h2 id="matrices">Matrices</h2>
+<p>$$
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \
+4 &amp; 5 &amp; 6 \
+7 &amp; 8 &amp; 9
+\end{bmatrix}
+$$</p>
+<h2 id="aligned-equations">Aligned Equations</h2>
+<p>$$
+\begin{aligned}
+f(x) &amp;= x^2 + 2x + 1 \
+&amp;= (x + 1)^2
+\end{aligned}
+$$</p>
+<h2 id="physics-examples">Physics Examples</h2>
+<p>Schrödinger&rsquo;s equation:
+$$
+i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)
+$$</p></p>
+        </a>
+      </div>
+    
+      <div class="card">
+        <a href="/posts/2023/10/my-first-post/">
+          <h3>My First Post</h3>
+          <p><p>This is my first blog post.</p></p>
+        </a>
+      </div>
+    
+  </div>
+
+    </main>
+  </div>
+  <footer class="minimal-footer">
+  <div class="footer-content">
+    <span class="copyright">&copy; 2025 Xu</span>
+  </div>
+</footer>
+
+</body>
+</html>

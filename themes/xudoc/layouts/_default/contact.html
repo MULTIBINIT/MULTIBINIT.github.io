@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="contact-page">
+  <header>
+    <h1>Contact</h1>
+  </header>
+  <section class="contact-content">
+    {{ with .Site.Params.contact }}
+      <div class="contact-methods">
+        {{ range . }}
+          <div class="contact-method">
+            {{ if eq .type "email" }}
+              <a href="mailto:{{ .value }}">{{ .value }}</a>
+            {{ else if eq .type "phone" }}
+              <a href="tel:{{ .value }}">{{ .value }}</a>
+            {{ else }}
+              {{ .value }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+</article>
+{{ end }}

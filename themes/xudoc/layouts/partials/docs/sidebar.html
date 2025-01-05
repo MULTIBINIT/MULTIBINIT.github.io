@@ -1,0 +1,19 @@
+<nav class="docs-nav">
+  {{ $currentPage := . }}
+  {{ $section := .CurrentSection }}
+  
+  <ul class="docs-nav-list">
+    {{ range .Site.Menus.docs }}
+      <li class="docs-nav-item {{ if $currentPage.IsMenuCurrent "docs" . }}active{{ end }}">
+        <a href="{{ .URL }}" class="docs-nav-link">{{ .Name }}</a>
+      </li>
+    {{ end }}
+  </ul>
+
+  {{ if .IsPage }}
+    <div class="docs-toc">
+      <h4 class="docs-toc-title">On This Page</h4>
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
+</nav>

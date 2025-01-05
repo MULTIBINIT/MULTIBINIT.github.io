@@ -1,0 +1,79 @@
+{{ define "main" }}
+<div class="multi-kanban-container">
+  {{ range .Pages }}
+<div class="kanban-board">
+  <h2>{{ .Title }}</h2>
+  <div class="kanban-grid">
+    <div class="kanban-column todo">
+      <div class="kanban-header">
+        <h3>To Do</h3>
+        <span class="badge">{{ len (where .Pages "Params.status" "todo") }}</span>
+      </div>
+      <div class="kanban-cards">
+        {{ range .Params.tasks }}
+          {{ if eq .status "todo" }}
+          <div class="kanban-card">
+            <div class="card-header">
+              <h4>{{ .title | markdownify }}</h4>
+              <span class="status-indicator {{ .status }}"></span>
+            </div>
+            <p>{{ .description | markdownify }}</p>
+            <div class="card-footer">
+              <span class="project-tag">{{ .project }}</span>
+            </div>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="kanban-column doing">
+      <div class="kanban-header">
+        <h3>In Progress</h3>
+        <span class="badge">{{ len (where .Pages "Params.status" "in-progress") }}</span>
+      </div>
+      <div class="kanban-cards">
+        {{ range .Params.tasks }}
+          {{ if eq .status "in-progress" }}
+          <div class="kanban-card">
+            <div class="card-header">
+              <h4>{{ .title | markdownify }}</h4>
+              <span class="status-indicator {{ .status }}"></span>
+            </div>
+            <p>{{ .description | markdownify }}</p>
+            <div class="card-footer">
+              <span class="project-tag">{{ .project }}</span>
+            </div>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="kanban-column done">
+      <div class="kanban-header">
+        <h3>Done</h3>
+        <span class="badge">{{ len (where .Pages "Params.status" "done") }}</span>
+      </div>
+      <div class="kanban-cards">
+        {{ range .Params.tasks }}
+          {{ if eq .status "done" }}
+          <div class="kanban-card">
+            <div class="card-header">
+              <h4>{{ .title | markdownify }}</h4>
+              <span class="status-indicator {{ .status }}"></span>
+            </div>
+            <p>{{ .description | markdownify }}</p>
+            <div class="card-footer">
+              <span class="project-tag">{{ .project }}</span>
+            </div>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+  {{ end }}
+</div>
+{{ end }}
