@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://multibinit.github.io/"
 languageCode = "en-us"
 title = "MULTIBINIT"
 theme = "xudoc"
@@ -8,11 +8,11 @@ theme = "xudoc"
   description = "MULTIBNIT: a second-priniciples method code for atomatic construction of atomic potentials and large scale lattice dynamics"
   docsLayout = "docs"
   contact = [
-    { type = "email", value = "xu@example.com" },
+    { type = "email", value = "x.he@uliege.be" },
     { type = "phone", value = "+1 234 567 890" }
   ]
   social = [
-    { platform = "github", url = "https://github.com/example" }
+    { platform = "github", url = "https://github.com/MULTIBINIT" }
   ]
   [params.toc]
     depth = 3

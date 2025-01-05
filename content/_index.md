@@ -2,6 +2,11 @@
 title: "Welcome"
 ---
 
-# Welcome to Our Documentation
+# Welcome to MULTIBINIT
 
-This is the official documentation for our project. Here you'll find guides, tutorials, and reference materials to help you get started and make the most of our tools and services.
+**NOTE**: This website is under construction. Please check back later for more information.
+
+MULTIBINIT is a platform for automatic construction of second-principle models and large-scale simulations of materials. It make use of results of first-principles calculations, and build effective models which demands much less computational resources while preserving the accuracy of it.
+
+This website provides resources for users to learn how to use MULTIBINIT, and examples of applications.
+
