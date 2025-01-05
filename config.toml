@@ -4,7 +4,7 @@ title = "MULTIBINIT"
 theme = "xudoc"
 
 [params]
-  author = "Xu"
+  author = "MULTIBINIT team"
   description = "MULTIBNIT: a second-priniciples method code for atomatic construction of atomic potentials and large scale lattice dynamics"
   docsLayout = "docs"
   contact = [
@@ -49,10 +49,6 @@ theme = "xudoc"
     name = "Usage"
     url = "/docs/usage/"
     weight = 2
-  [[menu.docs]]
-    name = "Configuration"
-    url = "/docs/configuration/"
-    weight = 3
 
 [permalinks]
   posts = "/posts/:year/:month/:title/"

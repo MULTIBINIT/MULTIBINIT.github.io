@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=55016&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Documentation | XuDoc</title>
+  <title>Documentation | MULTIBINIT</title>
   
   
     
@@ -32,7 +32,7 @@
   <div class="site-content">
     <header class="navbar">
   <div class="site-title">
-    <h1><a href="http://localhost:55016/">XuDoc</a></h1>
+    <h1><a href="http://localhost:1313/">MULTIBINIT</a></h1>
   </div>
   <nav>
     <ul>
@@ -64,7 +64,7 @@
       <div class="header-social">
         
           
-            <a href="https://github.com/example" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/MULTIBINIT" target="_blank" aria-label="GitHub">
               <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             </a>
           
@@ -106,7 +106,46 @@
     <main class="docs-content">
       <article class="documentation">
         <h1>Documentation</h1>
-        <p>Welcome to the Minimalist Hugo theme documentation. Here you&rsquo;ll find guides for installation, usage, and configuration.</p>
+        <h3 id="the-multibinit-ecosystem">The MULTIBINIT Ecosystem</h3>
+<p>The <strong>MULTIBINIT ecosystem</strong> began as a software platform designed for the automatic construction of atomic potentials using second-principles models. These models are essential for enabling large-scale molecular dynamics simulations. Over time, the platform has evolved into a comprehensive ecosystem, incorporating additional degrees of freedom such as magnetism and electronic structures. The MULTIBINIT ecosystem now includes a wide range of actively developed software tools.</p>
+<h4 id="key-components-of-the-multibinit-ecosystem">Key Components of the MULTIBINIT Ecosystem</h4>
+<ol>
+<li>
+<p><strong><a href="">MULTIBINIT-Lattice</a></strong>:
+This is the foundational module of MULTIBINIT. It focuses on constructing atomic potentials and is implemented in the initial version of the MULTIBINIT software.</p>
+</li>
+<li>
+<p><strong><a href="https://docs.abinit.org/tutorial/spin_model/">MULTIBINIT-Spin</a></strong>:
+This module implements atomistic spin dynamics based on the extended Heisenberg model and Landau-Lifshitz-Gilbert equations. It is designed to integrate seamlessly with MULTIBINIT-Lattice, enabling spontaneous spin-lattice dynamics.</p>
+</li>
+<li>
+<p><strong>MULTIBINIT-LWF</strong>:
+A sub-package of MULTIBINIT, this module specializes in lattice dynamics using Lattice Wannier Functions (LWFs).</p>
+</li>
+<li>
+<p><strong>Agate</strong> and <strong>QAgate</strong>:</p>
+<ul>
+<li><a href="https://github.com/piti-diablotin/agate">Agate</a>: A software tool for visualizing and post-processing simulation results from MULTIBINIT and ABINIT.</li>
+<li><a href="https://github.com/piti-diablotin/qagate">QAgate</a>: A quantum-focused extension of Agate for advanced post-processing tasks.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://tb2j.readthedocs.io/">TB2J</a></strong>:
+Initially developed to provide parameters for spin models in MULTIBINIT, TB2J has become a versatile tool for spin interaction calculations.</p>
+</li>
+<li>
+<p><strong><a href="https://lawaf.rtd.io">LaWaF</a></strong>:
+A package dedicated to constructing Lattice Wannier Functions (LWFs) and building minimalist atomic potential models. It also supports the creation of other Wannier functions, such as electron and magnon Wannier functions.</p>
+</li>
+<li>
+<p><strong>Matjes</strong>:
+A feature-rich spin dynamics and Monte Carlo simulation code. Matjes includes advanced features like high-order spin interactions, making it a powerful tool for complex simulations.</p>
+</li>
+<li>
+<p><strong><a href="https://www.abinit.org/">ABINIT</a></strong>:
+The MULTIBINIT software is developed and deployed within the broader <strong>ABINIT project</strong>, a well-established initiative for first-principles calculations. MULTIBINIT leverages ABINIT outputs to train its atomic models, ensuring a robust and integrated workflow.</p>
+</li>
+</ol>
 
         
         <div class="docs-toc">
@@ -131,12 +170,6 @@
                 <li>
                   <a href="/docs/configuration/">Configuration</a>
                 </li>
-              
-            
-              
-            
-              
-            
               
             
               
