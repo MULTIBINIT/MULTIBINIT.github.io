@@ -66,7 +66,7 @@ theme = "xudoc"
     url = "/docs/spin/"
     weight = 4
   [[menu.docs]]
-    name = "ecosystem"
+    name = "Ecosystem"
     url = "/docs/ecosystem/"
     weight = 5
 
